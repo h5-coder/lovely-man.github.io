@@ -1,32 +1,32 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Index from './map/index';
+import Color from './map/color';
+import About from './map/about';
 
 // 重定向 放最后面
 import Redirect from './map/Redirect';
 
+const Main = resolve => require(['@/views/main.vue'], resolve);
+
 Vue.use(Router);
 
-const router = new Router({
+export default new Router({
     // mode: 'history',
     routes: [
-        Index, // 主页
+        {
+            path: '/',
+            component: Main,
+            name: ' main',
+            children: [
+                Index, // 主页
+                Color,
+                About
+            ],
+            redirect: {
+                path: '/'
+            }
+        },
         Redirect // 路由重定向(访问不存在的页面时，重定向到这个页面) 放最后面
     ]
 });
-
-router.beforeEach((to, from, next) => {
-    // if (false) {
-    //     next({
-    //         path: '/index',
-    //         query: {
-    //             redirect: to.fullPath,
-    //         }
-    //     })
-    // } else {
-    //     next()
-    // }
-    next();
-});
-
-export default router;

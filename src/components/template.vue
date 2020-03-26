@@ -1,12 +1,14 @@
 <template>
-    <div class="container">
+    <div class="com-container">
+
     </div>
 </template>
 
 <script>
+
 export default {
     // 组件名
-    name: 'index',
+    name: 'template',
     // 实例的数据对象
     data() {
         return {
@@ -37,6 +39,7 @@ export default {
     },
     // 组件
     components: {
+
     },
     // 监视
     watch: {
@@ -55,7 +58,5 @@ export default {
 </script>
 
 <style lang="less">
-    // .container{
 
-    // }
 </style>

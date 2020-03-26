@@ -1,8 +1,6 @@
 .DS_Store
-dist/*
+
 packet/Output/*
-!dist/electron/*
-!dist/web/*
 node_modules/
 npm-debug.log
 npm-debug.log.*

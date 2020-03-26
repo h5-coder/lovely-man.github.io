@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "lovely-man.github.io",
   "version": "2.0.2",
   "description": "A Vue.js project",
   "author": "liangyanxiang",
@@ -16,8 +16,6 @@
     "element-ui": "^2.10.1",
     "less": "^2.7.3",
     "vue": "^2.6.11",
-    "vue-class-component": "^6.3.2",
-    "vue-property-decorator": "^6.1.0",
     "vue-router": "^3.0.7",
     "vuex": "^3.1.1"
   },

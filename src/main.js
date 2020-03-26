@@ -12,11 +12,12 @@ import '@/directives/index.js';
 
 // css
 import '../static/css/reset.css';
-import '../static/css/element-ui.css';
+import 'element-ui/lib/theme-chalk/index.css';
 import '../static/css/iconfont.css';
 
 // less
 import './less/index.less';
+
 // mock 动态引入用
 if (process.env.NODE_ENV === 'development') {
     process.env.MOCK && require('./mock/index.js');

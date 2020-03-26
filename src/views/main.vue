@@ -1,12 +1,17 @@
 <template>
-    <div class="container">
+    <div class="wrapper">
+        <com-header></com-header>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
+// import apiService from '@/services/API-service';
+import comHeader from "@/components/header/";
+
 export default {
     // 组件名
-    name: 'index',
+    name: 'root',
     // 实例的数据对象
     data() {
         return {
@@ -37,6 +42,7 @@ export default {
     },
     // 组件
     components: {
+        comHeader
     },
     // 监视
     watch: {
@@ -55,7 +61,5 @@ export default {
 </script>
 
 <style lang="less">
-    // .container{
 
-    // }
 </style>

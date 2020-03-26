@@ -1,12 +1,15 @@
 <template>
-    <div class="container">
+    <div class="com-container">
+
     </div>
 </template>
 
 <script>
+// import apiService from '@/services/API-service';
+
 export default {
     // 组件名
-    name: 'index',
+    name: 'root',
     // 实例的数据对象
     data() {
         return {
@@ -37,6 +40,7 @@ export default {
     },
     // 组件
     components: {
+
     },
     // 监视
     watch: {
@@ -55,7 +59,5 @@ export default {
 </script>
 
 <style lang="less">
-    // .container{
 
-    // }
 </style>
