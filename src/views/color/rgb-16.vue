@@ -56,14 +56,20 @@
                 </el-form>
             </div>
         </el-card>
-        <el-row  type="flex" justify="space-around">
-            <el-col :span="11">
+        <el-row type="flex" justify="space-around">
+            <el-col :span="11" class="pos-rela">
                 <pre class="pre is-always-shadow">
-{
-    color: {{form.hex}};
-    background: rgb({{form.rgb}});
-}
+                    {{json}}
                 </pre>
+                <button
+                    type="button"
+                    class="btn-copy"
+                    v-clipboard:copy="json"
+                    v-clipboard:success="onSuccess"
+                    v-clipboard:error="onError"
+                >
+                    <i class="el-icon-document-copy"></i>
+                </button>
             </el-col>
             <el-col :span="11">
                 <div :style="{background:form.hex}" class="pre"></div>
@@ -94,7 +100,14 @@ export default {
     // 数组或对象，用于接收来自父组件的数据
     props: {},
     // 计算
-    computed: {},
+    computed: {
+        json() {
+            return `{
+                    color: ${this.form.hex};
+                    background: rgb(${this.form.rgb});
+                }`;
+        }
+    },
     // 方法
     methods: {
         change(value, type) {
@@ -176,6 +189,12 @@ export default {
                 console.log(`Input ${rgb} is wrong!`);
                 return "#000"; // 输入格式错误,返回#000
             }
+        },
+        onSuccess() {
+            this.$message.success('复制成功');
+        },
+        onError() {
+
         }
     },
     // 生命周期函数 请求写在created中
@@ -206,9 +225,22 @@ export default {
 }
 .pre{
     margin: 10px 0;
-    padding: 10px ;
+    padding: 10px 0;
     height: 70px;
     border-radius: 4px;
-    background: #fff;
+    background: #ccc;
+}
+.btn-copy{
+    position:absolute;
+    top: 15px;
+    right: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    &:hover{
+        .el-icon-document-copy{
+            color: #409EFF;
+        }
+    }
 }
 </style>

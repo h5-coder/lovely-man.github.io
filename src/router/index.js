@@ -24,7 +24,7 @@ export default new Router({
                 About
             ],
             redirect: {
-                path: '/'
+                path: '/index'
             }
         },
         Redirect // 路由重定向(访问不存在的页面时，重定向到这个页面) 放最后面

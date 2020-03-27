@@ -2,7 +2,7 @@
     <div class="header-wrapper">
         <el-menu
             :default-active="activeIndex"
-            class="el-menu-demo"
+            class="el-menu-content"
             mode="horizontal"
             @select="handleSelect"
             router
@@ -10,9 +10,11 @@
             <el-menu-item index="/index">首页</el-menu-item>
             <el-menu-item
                 index="/color/rgb_16"
-            >RBG16进制互转工具</el-menu-item>
-            <el-submenu index="2"
-            disabled>
+            >颜色转换工具</el-menu-item>
+            <el-submenu
+                index="2"
+                disabled
+            >
                 <template slot="title">我的工作台</template>
                 <el-menu-item index="2-1">选项1</el-menu-item>
                 <el-menu-item index="2-2">选项2</el-menu-item>
@@ -69,6 +71,22 @@ export default {
 
 <style lang="less">
 .header-wrapper{
-    padding: 0 0 10px;
+    position: relative;
+    margin: 0 0 10px;
+    // background: #fff;
+    &::before{
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #e6e6e6;
+    }
+
+}
+.el-menu-content{
+    margin: 0 auto;
+    width: 1200px;
+
 }
 </style>
