@@ -1,13 +1,13 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
-
+console.log(__dirname)
 module.exports = {
-    build: {      
+    build: {
         env: require('./prod.env'),
-        index: path.resolve(__dirname, '../dist/index.html'),
+        index: path.resolve(__dirname, '../index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: './',
+        assetsPublicPath: '/dist/',
         productionSourceMap: false,//关闭生成map文件
         productionGzip: false,
         productionGzipExtensions: ['js', 'css'],
