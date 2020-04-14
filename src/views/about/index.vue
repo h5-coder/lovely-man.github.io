@@ -16,13 +16,13 @@
         <el-card>
             <h3 class="contact-me-title h3">联系我</h3>
             <div class="contact-me-content">
-                <a href="https://github.com/lovely-man">
+                <a href="https://github.com/lovely-man" title="https://github.com/lovely-man">
                     <img src="/static/images/github.png" alt="github">
                 </a>
-                <a :href="'tel:'+tel">
+                <a :href="'tel:'+tel" :title="tel">
                     <img src="/static/images/phone.png" alt="phone">
                 </a>
-                <a :href="'mailto:'+mail">
+                <a :href="'mailto:'+mail" :title="mail">
                     <img src="/static/images/mail.png" alt="mail">
                 </a>
             </div>
