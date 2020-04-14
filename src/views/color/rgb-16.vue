@@ -71,7 +71,7 @@
                     <i class="el-icon-document-copy"></i>
                 </button>
             </el-col>
-            <el-col :span="11">
+            <el-col :span="11" offset="2">
                 <div :style="{background:form.hex}" class="pre"></div>
             </el-col>
         </el-row>
