@@ -131,7 +131,7 @@ export default {
             this.form.hex.length > 7 &&
                 (this.form.hex = this.form.hex.substring(0, 7));
 
-            const rgb = this.hex2Rgb(this.form.hex);
+            const rgb = this.rgb2Dec(this.form.hex);
             console.log("rgb", rgb, rgb[0]);
             // [this.form.r,this.form.g,this.form.b]=rgb
             this.form.r = rgb[0];
@@ -189,6 +189,10 @@ export default {
                 console.log(`Input ${rgb} is wrong!`);
                 return "#000"; // 输入格式错误,返回#000
             }
+        },
+        rgb2Dec(rgb) {
+            const hex = this.hex2Rgb(rgb);
+            return hex.map(item => Number(item).toString());
         },
         onSuccess() {
             this.$message.success('复制成功');
