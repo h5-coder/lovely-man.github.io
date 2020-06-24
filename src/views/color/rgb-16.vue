@@ -1,5 +1,5 @@
 <template>
-    <div class="com-container">
+    <div class="com-container border-box pa-h20">
         <el-card>
             <div class="form-box">
                 <el-form
@@ -222,7 +222,7 @@ export default {
 .form-box {
     display: flex;
     justify-content: space-around;
-    padding: 22px 0 0;
+    // padding: 22px 0 0;
 }
 .form {
     width: 300px;

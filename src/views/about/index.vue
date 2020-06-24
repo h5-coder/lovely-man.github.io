@@ -1,5 +1,5 @@
 <template>
-    <div class="com-container">
+    <div class="com-container border-box pa-h20">
         <el-card>
             <ul class="list">
                 <li>
@@ -13,7 +13,7 @@
                 </li>
             </ul>
         </el-card>
-        <el-card>
+        <el-card class="ma-v20">
             <h3 class="contact-me-title h3">联系我</h3>
             <div class="contact-me-content">
                 <a href="https://github.com/lovely-man" title="https://github.com/lovely-man">

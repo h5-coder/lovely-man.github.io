@@ -72,7 +72,7 @@ export default {
 <style lang="less">
 .header-wrapper{
     position: relative;
-    margin: 0 0 10px;
+    margin: 0 0 20px;
     // background: #fff;
     &::before{
         content: ' ';
@@ -87,6 +87,14 @@ export default {
 .el-menu-content{
     margin: 0 auto;
     width: 1200px;
-
+    >.el-menu-item{
+        height: 48px;
+        line-height: 48px;
+    }
+    >.el-submenu .el-submenu__title{
+        height: 48px;
+        line-height: 48px;
+    }
 }
+
 </style>
